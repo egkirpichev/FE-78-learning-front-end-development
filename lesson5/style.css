@@ -1,0 +1,138 @@
+* {
+	font-family: "Roboto", sans-serif;
+}
+.wrapp {
+	height: 750px;
+	border: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.content {
+	margin: auto;
+}
+.content__description {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 28px;
+	text-align: center;
+	color: #7352FF;
+}
+.content__heading {
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 68px;
+	text-align: center;
+	color: #191919;
+}
+.content__tiles {
+	margin: 0 auto;
+	width: 1200px;
+	display: flex;
+	justify-content: space-between;
+}
+.content__tiles>div {
+	box-sizing: border-box;
+	padding: 25px;
+	height: 215px;
+	width: 285px;
+	border-radius: 10px;
+	box-shadow: 0px 5px 10px #bfbfbf;
+	text-align: center;
+}
+.tiles__heading {
+	margin: 0px;
+	font-weight: 400;
+	font-size: 25px;
+	line-height: 40px;
+	color: #191919;
+}
+.tiles__description {
+	margin: 0px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: #616A7E;
+}
+
+main {
+	width: 1440px;
+	margin: auto
+}
+
+.main__wrapp {
+	height: 960px;
+	width: 1440px;
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+.main__content-block {
+	width: 480px;
+	height: 480px;
+	display: inline-flex;
+}
+.main__content-block:nth-of-type(1) {
+	background: #22356F;
+}
+.main__content-block:nth-of-type(2) {
+	background: #0052C1;
+}
+.main__content-block:nth-of-type(3) {
+	background: url(./icons/joanna-kosinska-340748.svg);
+}
+.main__content-block:nth-of-type(4) {
+	background: #62D0DF;
+}
+.main__content-block:nth-of-type(5) {
+	background: #DEE1FF;
+}
+.main__content-block:nth-of-type(6) {
+	background: #8F00FF;
+}
+.content-block__text {
+	width: 340px;
+	padding-top: 30px;
+	margin: 96px auto;
+	text-align:left;
+	border-top: 1px solid #FFFFFF;
+	font-size: 32px;
+	line-height: 34px;
+	letter-spacing: -0.006em;
+	color:  #FFFFFF;
+}
+
+.content-block__text::before {
+	content:url(./icons/Ellipse.svg);
+	padding-right: 20px;
+	position: relative;
+	top: -5px;
+}
+.training-plans {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 1440px;
+	height: 480px;
+	margin: 22px auto 40px;
+}
+.training-plan {
+	width: 480px;
+	height: 240px;
+	display: inline-flex;
+	flex-direction: column;
+}
+.training-plan__heading {
+	margin: 55px 0px 0px 105px;
+	font-size: 28px;
+	line-height: 33px;
+	letter-spacing: -0.03em;
+	color: #22356F;
+}
+.training-plan__description {
+	margin: 29px 0px 0px 105px;
+	width: 298px;
+	font-size: 16px;
+	line-height: 25px;
+	letter-spacing: -0.03em;
+	color: #919ab7; 
+}
