@@ -1,3 +1,5 @@
+@import url(./customers.css);
+
 body {
 	margin: 0px;
 	font-family: "Open Sans", sans-serif;
@@ -11,7 +13,13 @@ button {
 	background-color: #FFFFFF;
 	border: none;
 	cursor: pointer;
-} 	
+} 
+
+h1,h2,h3,h4,h5,h6 {
+	padding: 0;
+	margin: 0;
+	font-family: "Raleway", sans-serif;
+}
 
 .wrapper{
 	width: 1510px;
@@ -72,7 +80,6 @@ button {
 
 .banner__heading {
 	margin: 50px 0px 0px 0px;
-	font-family: "Raleway", sans-serif;
 	font-size: 48px;
 	font-weight: 500;
 	line-height: 56px;
@@ -223,7 +230,7 @@ button {
 .tabs {
 	width: 1170px;
 	height: 540px;
-	margin: 100px auto;
+	margin: 100px auto 0px;
 }
 
 .tabs__switches {
@@ -258,7 +265,7 @@ button {
 }
 
 .tabs__content>h3 {
-	margin: 0;
+	font-family: "Open Sans", sans-serif;
 	font-weight: 700;
 	font-size: 30px;
 	line-height: 150px;
@@ -301,3 +308,4 @@ button {
 	width: 470px;
 	height: 500px;
 }
+
