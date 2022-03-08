@@ -2,6 +2,17 @@ body {
 	margin: 0px;
 	font-family: "Open Sans", sans-serif;
 }
+
+button {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
+	background-color: #FFFFFF;
+	border: none;
+	cursor: pointer;
+} 	
+
 .wrapper{
 	width: 1510px;
 	margin: 0px auto;
@@ -49,7 +60,7 @@ body {
 	position: relative;
 	height: 950px;
 	display: flex;
-	background: #00000080;
+	background-color: rgba(0, 0, 0, 0.5);
 	box-shadow: 0px 4px 4px #bfbfbf;
 }
 
@@ -207,4 +218,86 @@ body {
 	gap: 30px;
 	justify-content: space-around;
 	align-items: center;
+}
+
+.tabs {
+	width: 1170px;
+	height: 540px;
+	margin: 100px auto;
+}
+
+.tabs__switches {
+	height: 40px;
+	padding-bottom: 1px;
+}
+
+.tab-switch {
+	width: 184px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 40px;
+	text-align: center;
+	color:#333333;
+}
+
+.tab-switch:focus {
+	border-radius: 5px 5px 0px 0px;
+	border: 1px solid #C6CBCD;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.tab-switch:active {
+	border-radius: 5px 5px 0px 0px;
+	border: 1px solid #C6CBCD;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.tab-1 {
+	border: 1px solid #C6CBCD;
+	display: flex;
+}
+
+.tabs__content>h3 {
+	margin: 0;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 150px;
+	color: #000000;
+	text-align: center;
+}
+
+.tabs__content>p {
+	width: 570px;
+	margin: 0px 30px 0px 100px;
+	font-family: "Raleway", sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	color: #000000;
+	text-align: left;
+}
+
+.tabs__button {
+	margin: 27px 0px 0px 100px;
+	width: 270px;
+	height: 60px;
+	background-color: #EC7979;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 25px;
+	color: #FFFFFF;
+}
+
+.tabs__button:hover {
+	background-color: #AB4949;
+}
+
+.tabs__button:active {
+	background-color: #EC7979;
+	box-shadow: inset 0px 0px 10px #AB4949;
+}
+
+.tabs__img {
+	width: 470px;
+	height: 500px;
 }
