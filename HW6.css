@@ -1,0 +1,223 @@
+.download-section .button {
+  width: 270px;
+  height: 60px;
+  background: none;
+  border: 2px solid #FFFFFF;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  color: #FFFFFF;
+}
+
+.download-section .button:hover {
+  color: #EC7979;
+  border-color: #EC7979;
+}
+
+.download-section .button:active {
+  color: #FFFFFF;
+  background-color: #AB4949;
+  border-color: #AB4949;
+}
+
+.contacts__inputs > input, .contacts__message {
+  height: 38px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #BDBDBD;
+  border: none;
+  border-bottom: 1px solid #BDBDBD;
+}
+
+.contacts-section > button {
+  width: 370px;
+  height: 60px;
+  background: #EC7979;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+.contacts-section > button:hover {
+  background-color: #AB4949;
+}
+
+.contacts-section > button:active {
+  background-color: #EC7979;
+  -webkit-box-shadow: inset 0px 0px 10px #AB4949;
+          box-shadow: inset 0px 0px 10px #AB4949;
+}
+
+.customers-section {
+  width: 1170px;
+  margin: 50px auto 65px;
+}
+
+.reviews {
+  width: 1170px;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reviews .review {
+  width: 370px;
+}
+
+.reviews .review .comment {
+  padding: 38px 0px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  border-radius: 10px;
+  color: #86878B;
+  background-color: #E2E2E2;
+}
+
+.reviews .review .comment::before {
+  content: " ";
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 30px solid #E2E2E2;
+  position: relative;
+  top: 163px;
+}
+
+.reviews .review .reviewer-name {
+  display: inline-block;
+  position: relative;
+  bottom: 26px;
+  margin: 66px 0px 15px 0px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 54px;
+  text-align: left;
+  color: #000000;
+}
+
+.reviews .review .reviewer-picture {
+  display: inline-block;
+  margin: 66px 30px 0px 0px;
+}
+
+.reviews .review .reviewer-position {
+  position: relative;
+  left: 105px;
+  bottom: 30px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.download-section {
+  width: 1510px;
+  margin: 0px auto;
+  padding: 50px 0px;
+  background: rgba(0, 0, 0, 0.5) url(./icons/image.svg);
+  background-blend-mode: darken;
+  background-size: cover;
+  -webkit-box-shadow: 0px 4px 4px #bfbfbf;
+          box-shadow: 0px 4px 4px #bfbfbf;
+}
+
+.download-section .section__heading {
+  color: #FFFFFF;
+}
+
+.download-section .heading__underscore {
+  border-color: #FFFFFF;
+}
+
+.download-section .section__description {
+  color: #FFFFFF;
+}
+
+.download-section .button {
+  margin: 0px 570px 50px 570px;
+  width: 370px;
+}
+
+.contacts-section > button {
+  display: block;
+  margin: 0px auto 50px;
+}
+
+.inputs__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 215px;
+  margin: 50px 170px;
+}
+
+.contacts__inputs {
+  width: 570px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contacts__message {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 570px;
+  height: 215px;
+  resize: none;
+}
+
+.footer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 165px;
+  background-color: #000000;
+  padding-top: 35px;
+}
+
+.footer .footer__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 568px;
+  margin: 0px auto 28px;
+}
+
+.footer .footer__icons img {
+  width: 53px;
+  height: 53px;
+}
+
+.footer .credentials {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+/*# sourceMappingURL=HW6.css.map */
