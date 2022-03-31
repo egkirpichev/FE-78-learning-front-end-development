@@ -1,0 +1,248 @@
+@import ./sass/color
+@import ./sass/fontTemplates
+@import	./sass/buttons
+
+html
+	font-size: 10px	
+
+body
+	margin: 0		
+
+a, p
+	margin: 0
+	padding: 0
+	text-decoration: none
+
+h1, h2, h3, h4, h5, h6 
+	padding: 0
+	margin: 0
+	font-family: "Roboto", sans-serif
+
+.wrapp
+	max-width: 1440px
+	margin: 0rem auto
+
+.navigation 
+	background-color: $colorBlack
+	padding: 1.5rem 0rem 2rem 5rem 
+	.container
+		display: flex
+	 
+
+.navigation 
+	.logo
+		margin-right: 4rem
+
+.navigation
+	.navbar
+		display: flex
+		justify-content: space-between
+		align-items: center
+		gap: 2.5rem	
+		.anchorlink 
+			display: inline-block	
+			@include maintext ($fontcolor: $colorBiege)
+			line-height: 2.4rem
+	
+.navigation
+	.navbar
+	.two 
+		margin-left: 75rem 
+
+.main
+	background: url(./pictures/main-background.png)
+	background-repeat: no-repreat
+	backgroubd-size: cover 
+
+.main
+	.container
+		padding: 12rem 80.6rem 12.6rem 24rem
+		 
+
+.main
+	.description
+		max-width: 40rem
+		display: flex
+		flex-direction: column
+
+.main
+	.description
+		.heading
+			@include heading-font ($fontcolor: $colorBiege)
+		.text 
+			@include maintext ($fontcolor: $colorBiege)
+			font-size: 1.6rem
+			line-height: 2.7rem
+
+.product-description 
+	display: flex
+
+.picture 
+
+.product-description 
+	.content
+		background-color: $colorGray
+		.container
+			margin: 4rem 4rem auto 4rem  
+
+.product-description 
+	.content
+		.anchorlink
+			display: inline-block
+			margin-left: 56.7rem
+			@include maintext ($fontcolor: $colorDark)
+			font-size: 1.6rem
+			line-height: 1.9rem
+			border-bottom: 1px solid $colorDark
+			text-align: center
+				
+
+
+.product-description 
+	.content
+		.description
+			margin-top: 10.6rem
+			display: flex 
+
+.product-description 
+	.content
+		.description
+			.about 
+				display: flex
+				flex-direction: column
+				gap: 2.5rem
+	
+
+	.description
+			.about
+				.heading
+					@include heading-font ($fontcolor: $colorDark)
+					font-size: 2.8rem
+
+
+	.description
+			.about
+				.text 
+				@include maintext ($fontcolor: $colorDark)
+				.one
+					font-size: 1.6rem
+					line-height: 2.6rem		
+
+	.description
+			.about
+				.add-to-cart 
+					@include button-1 ($backgroundColor: $colorDark, $borderColor: $colorDark, $fontColor: $colorLightGray)	
+
+	.description
+			.about
+				.explore-more-products
+					@include button-1 ($backgroundColor: transparent, $borderColor: rgba(51, 51, 51, 0.2), $fontColor: $colorBlack) 
+					.button-text
+						display: inline-block
+						margin: 0rem 8.4rem
+					.arrow
+						display: inline-block
+						margin-left: 1.4rem  
+					
+
+.product-galery
+	background-color: $colorBiege 
+	.container
+		padding: 10rem 8rem 4rem
+
+.product-galery
+	.galery
+		display: flex
+		justify-content: space-between
+		margin-bottom: 4.8rem
+
+.galery
+	.product-tile
+		display: flex
+		flex-direction: column
+		align-items: center
+		max-height: 46rem
+		cursor: pointer 
+		.picture 
+			margin-bottom: 0.9rem
+		.name
+			@include maintext ($fontcolor: $colorDark)
+			line-height: 2.4rem		 
+		.description 
+			@include maintext ($fontcolor: $colorDark)
+			line-height: 2.4rem
+
+.product-galery
+	.separator
+		opacity: 0.2
+		border: 2px solid rgba(51, 51, 51, 0.2)
+	
+
+.galery
+	.product-tile
+		.scroll
+			width: 100%
+			border: 2px solid $colorDark
+			position: relative
+			transform: translateY(4.3rem)
+			opacity: 0	
+							
+
+.galery
+	.product-tile:hover
+		.scroll
+			opacity: 1
+			transition: opacity 0.3s linear
+
+.product-description-two
+	padding: 15rem 0rem 20rem 
+	display: flex
+
+.product-description-two
+	.container
+		padding: 0rem 12rem 10.6rem 8rem  
+		display: flex
+		flex-direction: column
+		gap: 2.5rem
+		.description
+			display: flex
+			flex-direction: column
+			gap: 2.5rem
+
+
+.product-description-two
+	.container
+		.annotation
+			@include maintext ($fontcolor: $colorDark)
+			font-size: 1.6rem
+			line-height: 1.9rem
+			text-align: left 
+
+.product-description-two
+	.container
+		.description 
+			.heading 
+				@include heading-font ($fontcolor: $colorDark)
+				font-size: 2.8rem				
+			.text 
+				@include maintext ($fontcolor: $colorDark)
+				font-size: 1.6rem
+				line-height: 2.6rem
+
+.product-description-two
+	.container
+		.description 
+			.explore-more-products
+				@include button-1 ($backgroundColor: transparent, $borderColor: rgba(51, 51, 51, 0.2), $fontColor: $colorBlack)
+				width: 30rem 
+				.button-text
+					display: inline-block
+					margin: 0rem 0.4rem
+				.arrow
+					display: inline-block
+					margin-left: 1.4rem  
+
+
+
+
+	

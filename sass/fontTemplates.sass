@@ -1,54 +1,15 @@
-%headingFont-1
-	font-family: "Montserat", sans-serif
-	font-weight: 700
-	font-size: 14.4rem
-	line-height: 17.5rem
-	text-align: center
-	color: $colorBlack
-
-%headingFont-2
-	font-family: "Kaushan Script", sans-serif
+@mixin heading-font ($fontcolor)
+	font-family: 'Roboto', sans-serif
 	font-weight: 400
-	font-size: 6.4rem
-	line-height: 9.3rem
-	text-align: center
-	color: $colorBlack
-
-%headingFont-3
-	font-family: "Raleway", sans-serif
-	font-weight: 700
 	font-size: 3rem
-	line-height: 3.5rem
-	text-align: center	
-	color: $colorBlack
+	line-height: 4rem
+	text-align: left
+	color: $fontcolor
 
-%headingFont-4
-	font-family: "Raleway", sans-serif
-	font-weight: 900
-	font-size: 2.4rem
-	line-height: 2.8rem
-	text-align: center
-	color: $colorBlack
-
-%headingFont-5
-	font-family: "Raleway", sans-serif
+@mixin maintext ($fontcolor)
+	font-family: 'Roboto', sans-serif
 	font-weight: 400
-	font-size: 1.8rem
-	line-height: 2.1rem
-	text-align: center
-	color: $colorBlack	
-
-%headingFont-6
-	font-family: "Raleway", sans-serif
-	font-weight: 700
-	font-size: 1.3rem
-	line-height: 1.5rem
-	text-align: center
-	color: $colorBlack
-
-@mixin separator ($bordercolor)
-	box-sizing: border-box
-	width: 17rem
-	height: 0rem
-	border: none
-	border-bottom: 0.4rem solid $bordercolor 
+	font-size: 1.4rem
+	line-height: 2.2rem
+	text-align: left
+	color: $fontcolor	
