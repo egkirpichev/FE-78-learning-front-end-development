@@ -9,18 +9,20 @@
 	text-align: center
 	text-transform: uppercase
 	background-color: transparent
-	border: 2px solid $colorWhite
+	border: 4px solid $colorWhite
+	cursor: pointer
 
 %button-1-hover
 	background-color: $colorWhite
 	color: $colorBrown
 
 %button-1-active
-	border: 2px solid $colorBrown	
+	border: 4px solid $colorBrown
 
 %button-2
 	box-sizing: border-box
 	width: 13.4rem
+	padding: 0
 	color: $colorWhite
 	background-color: $colorOcean
 	font-family: "Raleway", sans-serif
@@ -30,12 +32,13 @@
 	text-align: center
 	text-transform: uppercase
 	border: none
+	cursor: pointer
 
 %button-2-hover
 	background-color: $colorOceanDark
 
 %button-2-active
-	background-color: $colorDarkGreen	
+	background-color: $colorDarkGreen
 
 %navlink
 	width: 11.4rem
@@ -70,14 +73,16 @@
 	.number
 		font-size: 3.6rem
 		font-weight: 700
+		color: $colorSand
 	.name
 		font-size: 1.8rem
 		font-weight: 500
-		text-transform: uppercase		
+		color: $colorSand
+		text-transform: uppercase
 
 %anchor-link-active
-	color: $colorWhite
 	border-top: 0.4rem solid $colorWhite
 	.number
-		border-top: 0.4rem solid $colorTomato	 
-
+		color: $colorWhite
+	.name
+		color: $colorWhite

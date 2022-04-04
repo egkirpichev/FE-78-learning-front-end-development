@@ -9,9 +9,10 @@
 		href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@700&family=Open+Sans:wght@600&family=Raleway:wght@400;700;900&display=swap"
 		rel="stylesheet">
 	<script src="https://kit.fontawesome.com/09c1125e54.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="./style.sass" />
-	<script type="module" src="./app.js"></script>
+	<script src="./app.js"></script>
+	<link rel="stylesheet" href="./style.sass">
 	<title>Document</title>
+	<link rel="icon" href="./icons/favicon.png">
 </head>
 
 <body>
@@ -20,7 +21,7 @@
 			<header class="header">
 				<div class="container">
 					<div class="logo">
-						<img src="./icons/MoGo.svg" alt="header-logo">
+						<img class="logo" src="./icons/MoGo.svg" alt="header-logo">
 					</div>
 					<nav class="header__nav">
 						<button class="navlink">about</button>
@@ -31,9 +32,15 @@
 						<i class="fa-solid fa-cart-shopping"></i>
 						<i class="fa-solid fa-magnifying-glass"></i>
 					</nav>
+					<div class="hamburger">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</div>
+					<script src="./burger.js"></script>
 				</div>
 			</header>
-			<div class="banner">
+			<div class="banner" id="intro">
 				<div class="container">
 					<h2 class="h2">Creative Template</h2>
 					<h1 class="h1">WELCOME TO MOGO</h1>
@@ -41,30 +48,34 @@
 					<button class="banner__button">learn more</button>
 					<div class="banner__switches">
 						<button class="switch">
-							<span class="number">01</span>
-							<span class="name">intro</span>
-							<a href=""></a>
+							<a href="#intro">
+								<span class="number">01</span>
+								<span class="name">intro</span>
+							</a>
 						</button>
 						<button class="switch">
-							<span class="number">01</span>
-							<span class="name">intro</span>
-							<a href=""></a>
+							<a href="#work">
+								<span class="number">02</span>
+								<span class="name">work</span>
+							</a>
 						</button>
 						<button class="switch">
-							<span class="number">01</span>
-							<span class="name">intro</span>
-							<a href=""></a>
+							<a href="#about">
+								<span class="number">03</span>
+								<span class="name">about</span>
+							</a>
 						</button>
 						<button class="switch">
-							<div class="number">01</div>
-							<div class="name">intro</div>
-							<a href=""></a>
+							<a href="#contacts">
+								<span class="number">04</span>
+								<span class="name">contacts</span>
+							</a>
 						</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="about">
+		<div id="about" class="about">
 			<div class="container">
 				<h2 class="h2">What we do</h2>
 				<h4 class="h4">story about us</h4>
@@ -75,28 +86,40 @@
 					feugiat.
 				</h5>
 				<div class="about__tiles">
-					<div class="tile__cover">
-						<div class="tile">
-							<picture>
-								<source srcset="./pictures/rectangle_4.png" media="(max-width=1510px)">
-								<img src="./pictures/rectangle_4.png" alt="rectangle_4">
-							</picture>
+					<div class="tile">
+						<picture>
+							<source srcset="./pictures/rectangle_4.png" media="(min-width:1025px)">
+							<source srcset="./pictures/rectangle_4_tablet.png" media="(min-width:321px)">
+							<source srcset="./pictures/rectangle_4_phone.jpg" media="(max-width:320px)">
+							<img src="./pictures/rectangle_4.png" alt="rectangle_4">
+						</picture>
+						<div class="tile-cover">
+							<i class="icon fa-solid fa-user-check"></i>
+							<p class="text">super team</p>
 						</div>
 					</div>
-					<div class="tile__cover">
-						<div class="tile">
-							<picture>
-								<source srcset="./pictures/super_team_2.jpg" media="(max-width=1510px)">
-								<img src="./pictures/super_team_2.jpg" alt="super_team_2">
-							</picture>
+					<div class="tile">
+						<picture>
+							<source srcset="./pictures/super_team_2.jpg" media="(min-width:1025px)">
+							<source srcset="./pictures/super_team_2_tablet.jpg" media="(min-width:321px)">
+							<source srcset="./pictures/super_team_2_phone.jpg" media="(max-width:320px)">
+							<img src="./pictures/super_team_2.jpg" alt="super_team_2">
+						</picture>
+						<div class="tile-cover">
+							<i class="icon fa-solid fa-user-check"></i>
+							<p class="text">super team</p>
 						</div>
 					</div>
-					<div class="tile__cover">
-						<div class="tile">
-							<picture>
-								<source srcset="./pictures/super_team_3.png" media="(max-width=1510px)">
-								<img src="./pictures/super_team_3.png" alt="super_team_3">
-							</picture>
+					<div class="tile">
+						<picture>
+							<source srcset="./pictures/super_team_3.png" media="(min-width:1025px)">
+							<source srcset="./pictures/super_team_3_tablet.png" media="(min-width:321px)">
+							<source srcset="./pictures/super_team_3_phone.png" media="(max-width:320px)">
+							<img src="./pictures/super_team_3.png" alt="super_team_3">
+						</picture>
+						<div class="tile-cover">
+							<i class="icon fa-solid fa-user-check"></i>
+							<p class="text">super team</p>
 						</div>
 					</div>
 				</div>
@@ -133,28 +156,58 @@
 				<div class="separator"></div>
 				<div class="services">
 					<div class="service">
-						<div class="name one">photography</div>
-						<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						<div class="icon-container">
+							<i class="icon fa-solid fa-camera-retro"></i>
+						</div>
+						<div class="description">
+							<h5 class="name one">photography</h5>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
 					</div>
 					<div class="service">
-						<div class="name two">web design</div>
-						<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						<div class="icon-container">
+							<i class="icon fa-brands fa-chrome"></i>
+						</div>
+						<div class="description">
+							<h5 class="name two">web design</h5>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
 					</div>
 					<div class="service">
-						<div class="name three">creativity</div>
-						<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						<div class="icon-container">
+							<i class="icon fa-solid fa-ghost"></i>
+						</div>
+						<div class="description">
+							<h5 class="name three">creativity</h5>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
 					</div>
 					<div class="service">
-						<div class="name four">seo</div>
-						<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						<div class="icon-container">
+							<i class="icon fa-brands fa-internet-explorer"></i>
+						</div>
+						<div class="description">
+							<h5 class="name four">seo</h5>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
 					</div>
 					<div class="service">
-						<div class="name five">css/html</div>
-						<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						<div class="icon-container">
+							<i class="icon fa-solid fa-file-code"></i>
+						</div>
+						<div class="description">
+							<h5 class="name five">css/html</h5>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
 					</div>
 					<div class="service">
-						<div class="name six">digital</div>
-						<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						<div class="icon-container">
+							<i class="icon fa-solid fa-bullseye"></i>
+						</div>
+						<div class="description">
+							<h5 class="name six">digital</h5>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -166,33 +219,33 @@
 				<div class="separator"></div>
 				<div class="picture-container">
 					<picture class="tablet-border">
-						<source srcset="./pictures/Daco_624857_1.png" media="(max-width=1510px)">
-						<source srcset="./pictures/Daco_624857_1_tablet.png" media="(max-width=1024px)">
-						<source srcset="./pictures/Daco_624857_1_phone.png" media="(max-width=320px)">
+						<source srcset="./pictures/Daco_624857_1.png" media="(min-width:1025px)">
+						<source srcset="./pictures/Daco_624857_1_tablet.png" media="(min-width:321px)">
+						<source srcset="./pictures/Daco_624857_1_phone.png" media="(max-width:320px)">
 						<img class="tablet-border" src="./pictures/Daco_624857_1.png" alt="tablet-border">
 					</picture>
 					<picture class="tablet-screen">
-						<source srcset="./pictures/Rectangle_10.png" media="(max-width=1510px)">
-						<source srcset="./pictures/Rectangle_10_tablet.png" media="(max-width=1024px)">
-						<source srcset="./pictures/Rectangle_10_phone.png" media="(max-width=320px)">
+						<source srcset="./pictures/Rectangle_10.png" media="(min-width:1025px)">
+						<source srcset="./pictures/Rectangle_10_tablet.png" media="(min-width:321px)">
+						<source srcset="./pictures/Rectangle_10_phone.png" media="(max-width:320px)">
 						<img class="tablet-screen" src="./pictures/Rectangle_10.png" alt="tablet-screen">
 					</picture>
 					<picture class="phone-border">
-						<source srcset="./pictures/pngwing_1.png" media="(max-width=1510px)">
-						<source srcset="./pictures/pngwing_1_tablet.png" media="(max-width=1024px)">
-						<source srcset="./pictures/pngwing_1_phone.png" media="(max-width=320px)">
+						<source srcset="./pictures/pngwing_1.png" media="(min-width:1025px)">
+						<source srcset="./pictures/pngwing_1_tablet.png" media="(min-width:321px)">
+						<source srcset="./pictures/pngwing_1_phone.png" media="(max-width:320px)">
 						<img class="phone-border" src="./pictures/pngwing_1.png" alt="phone-border">
 					</picture>
 					<picture class="phone-screen">
-						<source srcset="./pictures/unsplash_RFDP7_80v5A.png" media="(max-width=1510px)">
-						<source srcset="./pictures/unsplash_RFDP7_80v5A_tablet.png" media="(max-width=1024px)">
-						<source srcset="./pictures/unsplash_RFDP7_80v5A_phone.png" media="(max-width=320px)">
+						<source srcset="./pictures/unsplash_RFDP7_80v5A.png" media="(min-width:1025px)">
+						<source srcset="./pictures/unsplash_RFDP7_80v5A_tablet.png" media="(min-width:321px)">
+						<source srcset="./pictures/unsplash_RFDP7_80v5A_phone.png" media="(max-width:320px)">
 						<img class="phone-screen" src="./pictures/unsplash_RFDP7_80v5A.png" alt="phone-screen">
 					</picture>
 				</div>
 			</div>
 		</div>
-		<div class="what-we-do-section">
+		<div class="what-we-do-section" id="work">
 			<div class="container">
 				<h2 class="h2">Service</h2>
 				<h4 class="h4">what we do</h4>
@@ -205,36 +258,73 @@
 				<div class="what-we-do">
 					<div class="picture">
 						<picture class="picture">
-							<source srcset="./pictures/unsplash_1lGeOg6IULc.png" media="max-width=1510px">
-							<source srcset="./pictures/unsplash_1lGeOg6IULc_tablet.png" media="max-width=1024px">
-							<source srcset="./pictures/unsplash_1lGeOg6IULc_phone.png" media="max-width=320px">
+							<source srcset="./pictures/unsplash_1lGeOg6IULc.png" media="(min-width:1025px)">
+							<source srcset="./pictures/unsplash_1lGeOg6IULc_tablet.png" media="(min-width:321px)">
+							<source srcset="./pictures/unsplash_1lGeOg6IULc_phone.png" media="(max-width:320px)">
 							<img class="picture" src="./pictures/unsplash_1lGeOg6IULc.png" alt="picture">
 						</picture>
 					</div>
 					<div class="text-areas">
 						<div class="text-area photography">
-							<i class="fa-solid fa-camera icon"></i>
-							<h5 class="h5">photography</h5>
-							<i class="fa-solid fa-chevron-down arrow"></i>
+							<div class="tile">
+								<i class="fa-solid fa-camera icon"></i>
+								<h5 class="h5">photography</h5>
+								<button class="expand">
+									<i class="fa-solid fa-chevron-down arrow"></i>
+								</button>
+							</div>
+							<div class="description">
+								<p class="text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros, nunc, rhoncus, id tincidunt tellus
+									rhoncus ornare. Amet, et elementum enim mattis. Purus volutpat sagittis ut adipiscing congue euismod
+									sit enim fringilla. Proin viverra nibh in vel ut pulvinar nec senectus. Justo, id ac facilisis
+									fringilla fermentum sed nunc aenean.
+								</p>
+							</div>
 						</div>
 						<div class="text-area creativity">
-							<i class="fa-solid fa-bullseye icon"></i>
-							<h5 class="h5">creativity</h5>
-							<i class="fa-solid fa-chevron-down arrow"></i>
+							<div class="tile">
+								<i class="fa-solid fa-bullseye icon"></i>
+								<h5 class="h5">creativity</h5>
+								<button class="expand">
+									<i class="fa-solid fa-chevron-down arrow"></i>
+								</button>
+							</div>
+							<div class="description">
+								<p class="text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros, nunc, rhoncus, id tincidunt tellus
+									rhoncus ornare. Amet, et elementum enim mattis. Purus volutpat sagittis ut adipiscing congue euismod
+									sit enim fringilla. Proin viverra nibh in vel ut pulvinar nec senectus. Justo, id ac facilisis
+									fringilla fermentum sed nunc aenean.
+								</p>
+							</div>
 						</div>
 						<div class="text-area design">
-							<i class="fa-solid fa-gear icon"></i>
-							<h5 class="h5">web design</h5>
-							<i class="fa-solid fa-chevron-down arrow"></i>
+							<div class="tile">
+								<i class="fa-solid fa-gear icon"></i>
+								<h5 class="h5">web design</h5>
+								<button class="expand">
+									<i class="fa-solid fa-chevron-down arrow"></i>
+								</button>
+							</div>
+							<div class="description">
+								<p class="text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros, nunc, rhoncus, id tincidunt tellus
+									rhoncus ornare. Amet, et elementum enim mattis. Purus volutpat sagittis ut adipiscing congue euismod
+									sit enim fringilla. Proin viverra nibh in vel ut pulvinar nec senectus. Justo, id ac facilisis
+									fringilla fermentum sed nunc aenean.
+								</p>
+							</div>
 						</div>
 					</div>
+					<script src="./interactive-textareas.js"></script>
 				</div>
 			</div>
 		</div>
 		<div class="comment-section">
 			<div class="container">
-				<div class="icon">
-					<i class="fa-solid fa-comment"></i>
+				<div class="icon-container">
+					<i class="icon fa-solid fa-comment"></i>
 				</div>
 				<div class="comment">
 					<p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque nec diam platea
@@ -244,6 +334,13 @@
 						<div class="separator"></div>
 						<h2 class="name">Jon Doe</h2>
 					</div>
+				</div>
+				<div class="comment-scroll">
+					<span class="dott"></span>
+					<span class="dott"></span>
+					<span class="dott"></span>
+					<span class="dott"></span>
+					<span class="dott"></span>
 				</div>
 			</div>
 		</div>
@@ -260,9 +357,9 @@
 				<div class="tiles">
 					<div class="tile one">
 						<picture class="profile-picture">
-							<source srcset="./pictures/team1.png" media="max-width=1510px">
-							<source srcset="./pictures/team1_tablet.png" media="max-width=1024px">
-							<source srcset="./pictures/team1_phone.png" media="max-width=320px">
+							<source srcset="./pictures/team1.png" media="(min-width:1025px)">
+							<source srcset="./pictures/team1_tablet.png" media="(min-width:321px)">
+							<source srcset="./pictures/team1_phone.png" media="(max-width:320px)">
 							<img class="profile-picture" src="./pictures/team1.png" alt="team1">
 						</picture>
 						<div class="tile-cover">
@@ -284,9 +381,9 @@
 					</div>
 					<div class="tile two">
 						<picture class="profile-picture">
-							<source srcset="./pictures/team2.png" media="max-width=1510px">
-							<source srcset="./pictures/team2_tablet.png" media="max-width=1024px">
-							<source srcset="./pictures/team2_phone.png" media="max-width=320px">
+							<source srcset="./pictures/team2.png" media="(min-width:1025px)">
+							<source srcset="./pictures/team2_tablet.png" media="(min-width:321px)">
+							<source srcset="./pictures/team2_phone.png" media="(max-width:320px)">
 							<img class="profile-picture" src="./pictures/team2.png" alt="team2">
 						</picture>
 						<div class="tile-cover">
@@ -308,9 +405,9 @@
 					</div>
 					<div class="tile three">
 						<picture class="profile-picture">
-							<source srcset="./pictures/team3.png" media="max-width=1510px">
-							<source srcset="./pictures/team3_tablet.png" media="max-width=1024px">
-							<source srcset="./pictures/team3_phone.png" media="max-width=320px">
+							<source srcset="./pictures/team3.png" media="(min-width:1025px)">
+							<source srcset="./pictures/team3_tablet.png" media="(min-width:321px)">
+							<source srcset="./pictures/team3_phone.png" media="(max-width:320px)">
 							<img class="profile-picture" src="./pictures/team3.png" alt="team3">
 						</picture>
 						<div class="tile-cover">
@@ -348,12 +445,14 @@
 			</div>
 		</div>
 		<div class="partners-banner">
-			<picture class="profile-picture">
-				<source srcset="./pictures/partners.png" media="(min-width=1025px)">
-				<source srcset="./pictures/partners_tablet.png" media="(max-width=1024px)">
-				<source srcset="./pictures/partners_phone.png" media="(max-width=320px)">
-				<img class="profile-picture" src="./pictures/partners.png" alt="partners">
-			</picture>
+			<div class="container">
+				<picture class="banner">
+					<source srcset="./pictures/partners.png" media="(min-width:1025px)">
+					<source srcset="./pictures/partners_tablet.png" media="(min-width:321px)">
+					<source srcset="./pictures/partners_phone.png" media="(max-width:320px)">
+					<img class="banner" src="./pictures/partners.png" alt="banner">
+				</picture>
+			</div>
 		</div>
 		<div class="our-work-section">
 			<div class="container">
@@ -370,55 +469,55 @@
 						<source srcset="./pictures/1.jpg" media="(min-width:1025px)">
 						<source srcset="./pictures/1_tablet.jpg" media="(min-width:321px)">
 						<source srcset="./pictures/1_phone.jpg" media="(max-width:320px)">
-						<img class="picture1 picture"  src="./pictures/1.jpg" alt="1">
+						<img class="picture1 picture" src="./pictures/1.jpg" alt="1">
 					</picture>
 					<picture class="picture2 picture">
 						<source srcset="./pictures/2.jpg" media="(min-width:1025px)">
 						<source srcset="./pictures/2_tablet.jpg" media="(min-width:321px)">
 						<source srcset="./pictures/2_phone.jpg" media="(max-width:320px)">
-						<img class="picture1 picture"  src="./pictures/2.jpg" alt="2">
+						<img class="picture2 picture" src="./pictures/2.jpg" alt="2">
 					</picture>
 					<picture class="picture3 picture">
 						<source srcset="./pictures/3.jpg" media="(min-width:1025px)">
 						<source srcset="./pictures/3_tablet.jpg" media="(min-width:321px)">
 						<source srcset="./pictures/3_phone.jpg" media="(max-width:320px)">
-						<img class="picture1 picture"  src="./pictures/3.jpg" alt="3">
+						<img class="picture3 picture" src="./pictures/3.jpg" alt="3">
 					</picture>
 					<picture class="picture4 picture">
 						<source srcset="./pictures/4.jpg" media="(min-width:1025px)">
 						<source srcset="./pictures/4_tablet.jpg" media="(min-width:321px)">
 						<source srcset="./pictures/4_phone.jpg" media="(max-width:320px)">
-						<img class="picture1 picture"  src="./pictures/4.jpg" alt="4">
+						<img class="picture4 picture" src="./pictures/4.jpg" alt="4">
 					</picture>
 					<picture class="picture5 picture">
 						<source srcset="./pictures/5.jpg" media="(min-width:1025px)">
 						<source srcset="./pictures/5_tablet.jpg" media="(min-width:321px)">
 						<source srcset="./pictures/5_phone.jpg" media="(max-width:320px)">
-						<img class="picture1 picture"  src="./pictures/5.jpg" alt="5">
+						<img class="picture5 picture" src="./pictures/5.jpg" alt="5">
 					</picture>
 					<picture class="picture6 picture">
 						<source srcset="./pictures/6.png" media="(min-width:1025px)">
 						<source srcset="./pictures/6_tablet.jpg" media="(min-width:321px)">
 						<source srcset="./pictures/6_phone.jpg" media="(max-width:320px)">
-						<img class="picture1 picture"  src="./pictures/6.png" alt="6">
+						<img class="picture6 picture" src="./pictures/6.png" alt="6">
 					</picture>
 					<picture class="picture7 picture">
 						<source srcset="./pictures/7.jpg" media="(min-width:1025px)">
 						<source srcset="./pictures/7_tablet.jpg" media="(min-width:321px)">
 						<source srcset="./pictures/7_phone.jpg" media="(max-width:320px)">
-						<img class="picture1 picture"  src="./pictures/7.jpg" alt="7">
+						<img class="picture7 picture" src="./pictures/7.jpg" alt="7">
 					</picture>
 				</div>
-			</div>	
+			</div>
 		</div>
-		<div class="comment-section 2">
+		<div class="comment-section two">
 			<div class="container">
 				<div class="profile-picture">
 					<picture class="picture">
 						<source srcset="./pictures/profilepicture.png" media="(min-width:1025px)">
 						<source srcset="./pictures/profilepicture_tablet.png" media="(min-width:321px)">
 						<source srcset="./pictures/profilepicture_phone.png" media="(max-width:320px)">
-						<img class="picture"  src="./pictures/profilepicture.png" alt="profilepicture">
+						<img class="picture" src="./pictures/profilepicture.png" alt="profilepicture">
 					</picture>
 				</div>
 				<div class="comment">
@@ -429,6 +528,13 @@
 						<div class="separator"></div>
 						<h2 class="name">James Philips</h2>
 					</div>
+				</div>
+				<div class="comment-scroll">
+					<span class="dott"></span>
+					<span class="dott"></span>
+					<span class="dott"></span>
+					<span class="dott"></span>
+					<span class="dott"></span>
 				</div>
 			</div>
 		</div>
@@ -444,7 +550,7 @@
 								<source srcset="./pictures/reviewer1.png" media="(min-width:1025px)">
 								<source srcset="./pictures/reviewer1_tablet.png" media="(min-width:321px)">
 								<source srcset="./pictures/reviewer1_phone.png" media="(max-width:320px)">
-								<img class="picture"  src="./pictures/reviewer1.png" alt="reviewer1">
+								<img class="picture" src="./pictures/reviewer1.png" alt="reviewer1">
 							</picture>
 						</div>
 						<div class="review">
@@ -454,7 +560,8 @@
 								<div class="separator"></div>
 							</div>
 							<p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque nec diam platea
-								ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet venenatis, massa sit.
+								ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet venenatis, massa
+								sit.
 							</p>
 						</div>
 					</div>
@@ -464,7 +571,7 @@
 								<source srcset="./pictures/reviewer2.png" media="(min-width:1025px)">
 								<source srcset="./pictures/reviewer2_tablet.png" media="(min-width:321px)">
 								<source srcset="./pictures/reviewer2_phone.png" media="(max-width:320px)">
-								<img class="picture"  src="./pictures/reviewer2.png" alt="reviewer1">
+								<img class="picture" src="./pictures/reviewer2.png" alt="reviewer1">
 							</picture>
 						</div>
 						<div class="review">
@@ -474,7 +581,8 @@
 								<div class="separator"></div>
 							</div>
 							<p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque nec diam platea
-								ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet venenatis, massa sit.
+								ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet venenatis, massa
+								sit.
 							</p>
 						</div>
 					</div>
@@ -484,7 +592,7 @@
 								<source srcset="./pictures/reviewer3.png" media="(min-width:1025px)">
 								<source srcset="./pictures/reviewer3_tablet.png" media="(min-width:321px)">
 								<source srcset="./pictures/reviewer3_phone.png" media="(max-width:320px)">
-								<img class="picture"  src="./pictures/reviewer3.png" alt="reviewer1">
+								<img class="picture" src="./pictures/reviewer3.png" alt="reviewer1">
 							</picture>
 						</div>
 						<div class="review">
@@ -494,7 +602,8 @@
 								<div class="separator"></div>
 							</div>
 							<p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque nec diam platea
-								ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet venenatis, massa sit.
+								ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet venenatis, massa
+								sit.
 							</p>
 						</div>
 					</div>
@@ -504,7 +613,7 @@
 								<source srcset="./pictures/reviewer4.png" media="(min-width:1025px)">
 								<source srcset="./pictures/reviewer4_tablet.png" media="(min-width:321px)">
 								<source srcset="./pictures/reviewer4_phone.png" media="(max-width:320px)">
-								<img class="picture"  src="./pictures/reviewer4.png" alt="reviewer1">
+								<img class="picture" src="./pictures/reviewer4.png" alt="reviewer1">
 							</picture>
 						</div>
 						<div class="review">
@@ -514,7 +623,8 @@
 								<div class="separator"></div>
 							</div>
 							<p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque nec diam platea
-								ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet venenatis, massa sit.
+								ullamcorper feugiat amet. Id aliquet vehicula feugiat arcu arcu nulla ornare. Sed amet venenatis, massa
+								sit.
 							</p>
 						</div>
 					</div>
@@ -530,16 +640,17 @@
 					<article class="article">
 						<picture class="picture">
 							<source srcset="./pictures/blog.png" media="(min-width:1025px)">
-								<source srcset="./pictures/blog_tablet.png" media="(min-width:321px)">
-								<source srcset="./pictures/blog_phone.png" media="(max-width:320px)">
-								<img class="picture"  src="./pictures/blog.png" alt="blog">
+							<source srcset="./pictures/blog_tablet.png" media="(min-width:321px)">
+							<source srcset="./pictures/blog_phone.png" media="(max-width:320px)">
+							<img class="picture" src="./pictures/blog.png" alt="blog">
 						</picture>
 						<div class="date">
 							<p class="day">15</p>
 							<p class="month">January</p>
 						</div>
 						<h5 class="title">Lorem ipsum dolor sit amet</h5>
-						<h5 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis proin varius vitae leo eget tincidunt duis amet. Et amet dis vel imperdiet volutpat mauris est leo cursus.</h5>	
+						<h5 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis proin varius
+							vitae leo eget tincidunt duis amet. Et amet dis vel imperdiet volutpat mauris est leo cursus.</h5>
 						<div class="counters">
 							<i class="fa-solid fa-eye icon"></i>
 							<span class="view-count">542</span>
@@ -547,45 +658,47 @@
 							<span class="comment-count">17</span>
 						</div>
 					</article>
-					<article class="article">	
-						<picture class="picture">
-							<source srcset="./pictures/blog.png" media="(min-width:1025px)">
-								<source srcset="./pictures/blog_tablet.png" media="(min-width:321px)">
-								<source srcset="./pictures/blog_phone.png" media="(max-width:320px)">
-								<img class="picture"  src="./pictures/blog.png" alt="blog">
-						</picture>
-						<div class="date">
-							<p class="day">15</p>
-							<p class="month">January</p>
-						</div>
-						<h5 class="title">Lorem ipsum dolor sit amet</h5>
-						<h5 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis proin varius vitae leo eget tincidunt duis amet. Et amet dis vel imperdiet volutpat mauris est leo cursus.</h5>	
-						<div class="counters">
-							<i class="fa-solid fa-eye icon"></i>
-							<span class="view-count">542</span>
-							<i class="fa-solid fa-comment icon"></i>
-							<span class="comment-count">17</span>
-						</div>
-					</article>	
 					<article class="article">
 						<picture class="picture">
 							<source srcset="./pictures/blog.png" media="(min-width:1025px)">
-								<source srcset="./pictures/blog_tablet.png" media="(min-width:321px)">
-								<source srcset="./pictures/blog_phone.png" media="(max-width:320px)">
-								<img class="picture"  src="./pictures/blog.png" alt="blog">
+							<source srcset="./pictures/blog_tablet.png" media="(min-width:321px)">
+							<source srcset="./pictures/blog_phone.png" media="(max-width:320px)">
+							<img class="picture" src="./pictures/blog.png" alt="blog">
 						</picture>
 						<div class="date">
 							<p class="day">15</p>
 							<p class="month">January</p>
 						</div>
 						<h5 class="title">Lorem ipsum dolor sit amet</h5>
-						<h5 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis proin varius vitae leo eget tincidunt duis amet. Et amet dis vel imperdiet volutpat mauris est leo cursus.</h5>	
+						<h5 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis proin varius
+							vitae leo eget tincidunt duis amet. Et amet dis vel imperdiet volutpat mauris est leo cursus.</h5>
 						<div class="counters">
 							<i class="fa-solid fa-eye icon"></i>
 							<span class="view-count">542</span>
 							<i class="fa-solid fa-comment icon"></i>
 							<span class="comment-count">17</span>
-						</div>		
+						</div>
+					</article>
+					<article class="article">
+						<picture class="picture">
+							<source srcset="./pictures/blog.png" media="(min-width:1025px)">
+							<source srcset="./pictures/blog_tablet.png" media="(min-width:321px)">
+							<source srcset="./pictures/blog_phone.png" media="(max-width:320px)">
+							<img class="picture" src="./pictures/blog.png" alt="blog">
+						</picture>
+						<div class="date">
+							<p class="day">15</p>
+							<p class="month">January</p>
+						</div>
+						<h5 class="title">Lorem ipsum dolor sit amet</h5>
+						<h5 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis proin varius
+							vitae leo eget tincidunt duis amet. Et amet dis vel imperdiet volutpat mauris est leo cursus.</h5>
+						<div class="counters">
+							<i class="fa-solid fa-eye icon"></i>
+							<span class="view-count">542</span>
+							<i class="fa-solid fa-comment icon"></i>
+							<span class="comment-count">17</span>
+						</div>
 					</article>
 				</div>
 			</div>
@@ -597,96 +710,114 @@
 				<div class="separator"></div>
 			</div>
 		</div>
-		</div>
-		<footer class="footer">
-			<div class="container">
-				<div class="socials">
-					<div class="logo">
-						<picture class="picture">
-							<source srcset="./pictures/Footer_logo.svg" media="(min-width:1025px)">
-								<source srcset="./pictures/Footer_logo_tablet.svg" media="(min-width:321px)">
-								<source srcset="./pictures/Footer_logo_phone.svg" media="(max-width:320px)">
-								<img class="picture"  src="./pictures/Footer_logo.svg" alt="Footer_logo">
-						</picture>
-					</div>
-					<p class="text">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis proin varius vitae leo eget tincidunt duis amet. Et amet dis vel imperdiet volutpat mauris est leo cursus.
-					</p>
-					<div class="follower-count">
-						<span class="number">15k</span>
-						<span class="name">followers</span>
-					</div>
-					<div class="separator"></div>
-					<div class="socials__icons">
-						<span class="text">Follow US</span>
-						<div class="icons-container">
-							<i class="icon fa-brands fa-facebook-f"></i>
-							<i class="icon fa-brands fa-twitter"></i>
-							<i class="icon fa-brands fa-pinterest-p"></i>
-							<i class="icon fa-brands fa-instagram"></i>
-							<i class="icon fa-brands fa-linkedin-in"></i>
-							<i class="icon fa-brands fa-youtube"></i>
-							<i class="icon fa-brands fa-dribbble"></i>
-							<i class="icon fa-brands fa-tiktok"></i>
-						</div>	
-					</div>
-					<div class="subscribtion">
-						<input type="e-mail" id="e-mail" placeholder="Your Email">
-						<button class="subscribe-button">subscribe</button>
+	</div>
+	<footer class="footer" id="contacts">
+		<div class="container">
+			<div class="socials">
+				<div class="logo">
+					<picture class="picture">
+						<source srcset="./pictures/Footer_logo.svg" media="(min-width:1025px)">
+						<source srcset="./pictures/Footer_logo_tablet.svg" media="(min-width:321px)">
+						<source srcset="./pictures/Footer_logo_phone.svg" media="(max-width:320px)">
+						<img class="picture" src="./pictures/Footer_logo.svg" alt="Footer_logo">
+					</picture>
+				</div>
+				<p class="text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis proin varius vitae leo eget
+					tincidunt duis amet. Et amet dis vel imperdiet volutpat mauris est leo cursus.
+				</p>
+				<div class="follower-count">
+					<span class="number">15k</span>
+					<span class="name">followers</span>
+				</div>
+				<div class="separator"></div>
+				<div class="socials__icons">
+					<span class="text">Follow US</span>
+					<div class="icons-container">
+						<i class="icon fa-brands fa-facebook-f"></i>
+						<i class="icon fa-brands fa-twitter"></i>
+						<i class="icon fa-brands fa-pinterest-p"></i>
+						<i class="icon fa-brands fa-instagram"></i>
+						<i class="icon fa-brands fa-linkedin-in"></i>
+						<i class="icon fa-brands fa-youtube"></i>
+						<i class="icon fa-brands fa-dribbble"></i>
+						<i class="icon fa-brands fa-tiktok"></i>
 					</div>
 				</div>
-				<div class="articles">
-					<h5 class="header">Blogs</h5>
-					<div class="article">
-						<picture class="picture">
-							<source srcset="./pictures/blog-picture-1.png" media="(min-width:1025px)">
-								<source srcset="./pictures/blog-picture-1_tablet.png" media="(min-width:321px)">
-								<source srcset="./pictures/blog-picture-1_phone.png" media="(max-width:320px)">
-								<img class="picture" src="./pictures/blog-picture-1.png" alt="blog-picture-1">
-						</picture>
-						<h5 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
-						<p class="date">jan.9.22.15</p>
-					</div>
-					<div class="article">
-						<picture class="picture">
-							<source srcset="./pictures/blog-picture-2.png" media="(min-width:1025px)">
-								<source srcset="./pictures/blog-picture-2_tablet.png" media="(min-width:321px)">
-								<source srcset="./pictures/blog-picture-2_phone.png" media="(max-width:320px)">
-								<img class="picture" src="./pictures/blog-picture-2.png" alt="blog-picture-2">
-						</picture>
-						<h5 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
-						<p class="date">jan.9.22.15</p>
-					</div>
-					<div class="article">
-						<picture class="picture">
-							<source srcset="./pictures/blog-picture-3.png" media="(min-width:1025px)">
-								<source srcset="./pictures/blog-picture-3_tablet.png" media="(min-width:321px)">
-								<source srcset="./pictures/blog-picture-3_phone.png" media="(max-width:320px)">
-								<img class="picture" src="./pictures/blog-picture-3.png" alt="blog-picture-3">
-						</picture>
-						<h5 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
-						<p class="date">jan.9.22.15</p>
-					</div>	
-				</div>
-				<div class="instagram-photos">
-					<h5 class="header">Instagram</h5>
-					<div class="instagram-photos-grid">
-						<img src="./pictures/instagram-photo-1.png" alt="instagram-photo-1" class="picture">
-						<img src="./pictures/instagram-photo-2.png" alt="instagram-photo-2" class="picture">
-						<img src="./pictures/instagram-photo-3.png" alt="instagram-photo-3" class="picture">
-						<img src="./pictures/instagram-photo-4.png" alt="instagram-photo-4" class="picture">
-						<img src="./pictures/instagram-photo-5.png" alt="instagram-photo-5" class="picture">
-						<img src="./pictures/instagram-photo-6.png" alt="instagram-photo-6" class="picture">
-						<img src="./pictures/instagram-photo-7.png" alt="instagram-photo-7" class="picture">
-						<img src="./pictures/instagram-photo-8.png" alt="instagram-photo-8" class="picture">
-						<img src="./pictures/instagram-photo-9.png" alt="instagram-photo-9" class="picture">
-					</div>
-					<a href="">see all photos</a>
+				<div class="subscribtion">
+					<input type="e-mail" id="e-mail" placeholder="Your Email">
+					<button class="subscribe-button">subscribe</button>
 				</div>
 			</div>
-		</footer>		
+			<div class="articles">
+				<h5 class="header">Blogs</h5>
+				<div class="article">
+					<div class="picture-container">
+						<picture class="picture">
+							<source srcset="./pictures/blog-picture-1.png" media="(min-width:1025px)">
+							<source srcset="./pictures/blog-picture-1_tablet.png" media="(min-width:321px)">
+							<source srcset="./pictures/blog-picture-1_phone.png" media="(max-width:320px)">
+							<img class="picture" src="./pictures/blog-picture-1.png" alt="blog-picture-1">
+						</picture>
+					</div>
+					<div class="title-container">
+						<h5 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+						<p class="date">jan.9.22.15</p>
+					</div>
+				</div>
+				<div class="article">
+					<div class="picture-container">
+						<picture class="picture">
+							<source srcset="./pictures/blog-picture-2.png" media="(min-width:1025px)">
+							<source srcset="./pictures/blog-picture-2_tablet.png" media="(min-width:321px)">
+							<source srcset="./pictures/blog-picture-2_phone.png" media="(max-width:320px)">
+							<img class="picture" src="./pictures/blog-picture-2.png" alt="blog-picture-2">
+						</picture>
+					</div>
+					<div class="title-container">
+						<h5 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+						<p class="date">jan.9.22.15</p>
+					</div>
+				</div>
+				<div class="article">
+					<div class="picture-container">
+						<picture class="picture">
+							<source srcset="./pictures/blog-picture-3.png" media="(min-width:1025px)">
+							<source srcset="./pictures/blog-picture-3_tablet.png" media="(min-width:321px)">
+							<source srcset="./pictures/blog-picture-3_phone.png" media="(max-width:320px)">
+							<img class="picture" src="./pictures/blog-picture-3.png" alt="blog-picture-3">
+						</picture>
+					</div>
+					<div class="title-container">
+						<h5 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+						<p class="date">jan.9.22.15</p>
+					</div>
+				</div>
+			</div>
+			<div class="instagram-photos">
+				<h5 class="header">Instagram</h5>
+				<div class="instagram-photos-grid">
+					<img src="./pictures/instagram-photo-1.png" alt="instagram-photo-1" class="picture one">
+					<img src="./pictures/instagram-photo-2.png" alt="instagram-photo-2" class="picture two">
+					<img src="./pictures/instagram-photo-3.png" alt="instagram-photo-3" class="picture three">
+					<img src="./pictures/instagram-photo-4.png" alt="instagram-photo-4" class="picture four">
+					<img src="./pictures/instagram-photo-5.png" alt="instagram-photo-5" class="picture five">
+					<img src="./pictures/instagram-photo-6.png" alt="instagram-photo-6" class="picture six">
+					<img src="./pictures/instagram-photo-7.png" alt="instagram-photo-7" class="picture seven">
+					<img src="./pictures/instagram-photo-8.png" alt="instagram-photo-8" class="picture eight">
+					<img src="./pictures/instagram-photo-9.png" alt="instagram-photo-9" class="picture nine">
+				</div>
+				<a id="link" href="">see all photos</a>
+			</div>
+		</div>
+	</footer>
+	<section class="credentials">
+		<div class="container">
+			<div class="separator"></div>
+			<h6 class="copyright">Copyright © 2021 mogo. All Rights Reserved</h6>
+		</div>
+	</section>
 	</div>
-
 </body>
 
 </html>

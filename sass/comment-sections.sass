@@ -1,0 +1,85 @@
+.comment-section
+	background-color: $colorBiege
+	.container
+		padding: 4.2rem 0
+		width: 97rem
+		display: flex
+		justify-content: space-between
+
+.comment-section.two
+	background-color: $colorWhite
+
+@media (max-width:320px)
+	.comment-section
+		.container
+			flex-direction: column
+			width: 42.9rem
+			.icon-container
+				display: none
+
+.comment-section
+	.comment-text
+		width: 77rem
+		font-family: 'Raleway', sans-serif
+		font-style: italic
+		font-weight: 500
+		font-size: 2.4rem
+		line-height: 2.8rem
+		color: #A9AFB1
+
+@media (max-width:320px)
+	.comment-section
+		.comment-text
+			width: 42.9rem
+
+.comment-section
+	.reviewer
+		display: flex
+		align-items: center
+		gap: 5.6rem
+
+.comment-section
+	.icon-container
+		margin: auto 0
+		display: flex
+		border: 2px solid $colorOcean
+		align-items: center
+		justify-content: center
+		height: 17rem
+		width: 17rem
+		.icon
+			font-size: 8rem
+			color: $colorOcean
+
+.comment-section
+	.separator
+		@include separator ($bordercolor: $colorTomato)
+		display: inline-block
+		width: 7rem
+
+	.reviewer
+		.name
+			@extend %headingFont-2
+			margin: 0
+			font-size: 3rem
+			line-height: 5.3rem
+			text-align: left
+			text-transform: none
+
+.comment-scroll
+	display: none
+	margin: 3.37rem auto 0rem
+	gap: 3rem
+	.dott
+		display: inliene-box
+		width: 1.5rem
+		height: 1.5rem
+		border: 1px solid $colorDarkgrey
+		border-radius: 50%
+		cursor: pointer
+	.dott:hover
+		background-color: $colorDarkgrey
+
+@media (max-width:320px)
+	.comment-scroll
+		display: flex

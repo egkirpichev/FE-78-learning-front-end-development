@@ -1,0 +1,38 @@
+.counter-section
+	background-color: $colorOcean
+	margin-bottom: 4.2rem
+	.container
+		display: flex
+		justify-content: center
+
+@media (max-width:320px)
+	.counter-section
+		.container
+			flex-wrap: wrap
+			.counter
+				width: 49%
+				border-bottom: 1px solid $colorWhite
+				border-right: hidden
+				border-left: hidden
+
+.counter
+	width: 20%
+	background-color: $colorOcean
+	border-left: 1px solid $colorWhite
+	border-right: 1px solid $colorWhite
+
+.count
+	font-family: "Raleway", sans-serif
+	font-weight: 700
+	font-size: 6.4rem
+	line-height: 2.8rem
+	text-align: center
+	color: $colorWhite
+
+.counter-name
+	font-family: "Raleway", sans-serif
+	font-weight: 500
+	font-size: 2.4rem
+	line-height: 2.8rem
+	text-align: center
+	color: $colorWhite

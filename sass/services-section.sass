@@ -1,0 +1,61 @@
+.services-section
+	.container
+		margin-bottom: 10.2rem
+
+.services-section
+	.h2
+		@extend %headingFont-2
+		font-size: 3rem
+		line-height: 8rem
+
+.services-section
+	.h4
+		@extend %headingFont-4
+		font-size: 3.6rem
+		line-height: 8.1rem
+		text-transform: uppercase
+		margin-bottom: 2.4 rem
+
+.services-section
+	.separator
+		@include separator ($bordercolor: $colorTomato)
+		margin: 0rem auto 8rem
+
+.services
+	height: 41.8rem
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr
+	grid-template-rows: 1fr 1fr
+	grid-column-gap: 3rem
+	grid-row-gap: 10rem
+
+.service
+	display: flex
+	gap: 3rem
+	.name
+		height: 5.1rem
+		font-family: 'Raleway', sans-serif
+		font-style: normal
+		font-weight: 700
+		font-size: 2.4rem
+		line-height: 5.1rem
+		text-transform: uppercase
+		color: $colorCoal
+	.description
+		height: 8rem
+		font-family: 'Raleway', sans-serif
+		font-style: normal
+		font-weight: 400
+		font-size: 1.8rem
+		line-height: 2.1rem
+		color: $colorCoal
+	.icon
+		display: inline-block
+		font-size: 7rem
+		color: $colorOcean
+
+@media (max-width:320px)
+	.services
+		display: flex
+		flex-direction: column
+		height: 100%

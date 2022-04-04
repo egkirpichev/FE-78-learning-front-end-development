@@ -1,0 +1,109 @@
+.about
+	padding: 4.2rem 0rem 0rem
+
+.about
+	.h2
+		@extend %headingFont-2
+		font-size: 3rem
+		line-height: 8rem
+
+.about
+	.h4
+		@extend %headingFont-4
+		font-size: 3.6rem
+		line-height: 8.1rem
+		text-transform: uppercase
+		margin-bottom: 2.4 rem
+
+.about
+	.separator
+		@include separator ($bordercolor: $colorTomato)
+		margin: 0rem auto
+
+.about
+	.h5
+		@extend %headingFont-5
+		margin: 3.8rem auto
+
+.about__tiles
+	display: flex
+	justify-content: space-between
+	margin-bottom: 10.2rem
+
+@media (max-width:320px)
+	.about__tiles
+		flex-direction: column
+		gap: 2.3rem
+
+.about__tiles
+	.tile
+		height: 33.8rem
+
+@media (max-width:1024px) and (min-width:321px)
+	.about__tiles
+		.tile
+			height: 42.2rem
+
+@media (max-width:320px)
+	.about__tiles
+		.tile
+			height: 38.5rem
+
+.about__tiles
+	.tile
+		.tile-cover
+			position: relative
+			cursor: pointer
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			width: 100%
+			height: 100%
+			background: linear-gradient(360deg, rgba(237, 215, 137, 0.9) 0%, rgba(233, 130, 131, 0.9) 100%)
+			position: relative
+			bottom: 34rem
+			opacity: 0
+			cursor: pointer
+			.icon
+				display: inline-block
+				font-size: 3rem
+				color: $colorWhite
+			.text
+				font-family: "Raleway", sans-serif
+				font-weight: 500
+				font-size: 2.4rem
+				line-height: 2.8rem
+				text-align: center
+				text-transform: uppercase
+				color: $colorWhite
+
+.about__tiles
+	.tile
+		.tile-cover:hover
+			opacity: 0.9
+			transform: translate(-1rem, -1rem)
+			transition: opacity 0.3s linear
+
+@media (max-width:1024px) and (min-width:321px)
+	.about__tiles
+		.tile
+			.tile-cover:hover
+				transform: translate(-1rem, -10rem)
+
+@media (max-width:320px)
+	.about__tiles
+		.tile
+			.tile-cover
+				flex-direction: row
+				justify-content: flex-start
+				gap: 4.85rem
+				opacity: 1
+				height: 12.7rem
+				margin-top: 21.1rem
+				.icon
+					margin-left: 2.1rem
+			.tile-cover:hover
+				opacity: 1
+				transition: none
+				transform: none

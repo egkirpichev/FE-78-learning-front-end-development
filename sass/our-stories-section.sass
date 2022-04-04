@@ -1,0 +1,110 @@
+.our-stories-section
+	.container
+		padding: 8.4rem 0
+		margin-bottom: 8.4rem
+
+@media (max-width:320px)
+.our-stories-section
+	.container
+		margin-bottom: 0
+
+.our-stories-section
+	.h2
+		@extend %headingFont-2
+		font-size: 3rem
+		line-height: 8rem
+
+.our-stories-section
+	.h4
+		@extend %headingFont-4
+		font-size: 3.6rem
+		line-height: 8.1rem
+		text-transform: uppercase
+		margin-bottom: 2.4rem
+
+.our-stories-section
+	.separator
+		@include separator ($bordercolor: $colorTomato)
+		margin: 0rem auto 4.2rem
+
+.our-stories-section
+	.blog
+		display: flex
+		justify-content: space-between
+
+@media (max-width:320px)
+	.our-stories-section
+		.blog
+			flex-direction: column
+			gap: 3rem
+
+.article
+	max-height: 43.2rem
+
+@media (max-width:320px)
+	.article
+		height: 100%
+		max-height: 63rem
+
+.blog
+	cursor: pointer
+	.date
+		width: 8rem
+		height: 8rem
+		display: flex
+		flex-direction: column
+		justify-content: space-around
+		position: absolute
+		transform: translate(-1rem, -11rem)
+		background-color: $colorOcean
+		p
+			margin: 0
+		.day
+			font-family: "Raleway", sans-serif
+			font-weight: 700
+			font-size: 3.6rem
+			line-height: 3rem
+			text-align: center
+			color: $colorWhite
+		.month
+			font-family: "Raleway", sans-serif
+			font-weight: 500
+			font-size: 1.8rem
+			line-height: 3rem
+			text-align: center
+			color: $colorWhite
+
+.blog
+	.title
+		margin: 3rem 0 0
+		width: 37rem
+		@extend %headingFont-5
+		font-weight: 700
+		font-size: 2.4rem
+		line-height: 5.2rem
+		text-transform: uppercase
+		text-align: left
+
+.blog
+	.text
+		font-family: 'Raleway', sans-serif
+		font-weight: 400
+		font-size: 1.8rem
+		line-height: 2.1rem
+		text-align: left
+
+.blog
+	.counters
+		margin-top: 2.2rem
+		display: flex
+		align-items: center
+		i
+			font-size: 2.3rem
+			color: $colorOcean
+		span
+			display: inline-block
+			margin: 0rem 4.7rem 0 1.6rem
+			font-family: 'Raleway', sans-serif
+			font-weight: 400
+			font-size: 1.3rem
+			line-height: 3.5rem

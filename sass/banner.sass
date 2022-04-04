@@ -1,0 +1,85 @@
+.banner
+	.h2
+		@extend %headingFont-2
+		margin-top: 7.7rem
+		color: $colorWhite
+
+@media (max-width:320px)
+	.banner
+		.h2
+			font-size: 5.4rem
+			line-height: 8.07rem
+
+.banner
+	.h1
+		@extend %headingFont-1
+		margin-bottom: 4.4rem
+		color: $colorWhite
+
+@media (max-width:320px)
+	.banner
+		.h1
+			font-size: 7.16rem
+			line-height: 8.7rem
+
+.banner
+	.separator
+		@include separator ($bordercolor: $colorWhite)
+		margin: 7.2rem auto 0rem
+
+.banner__button
+	@extend %button-1
+	display: block
+	margin: 7.2rem auto 0rem
+
+.banner__button:hover
+	@extend %button-1-hover
+
+.banner__button:active
+	@extend %button-1-active
+
+.banner__switches
+	display: flex
+	justify-content: space-between
+	margin: 11.6rem 1rem 0
+
+.switch
+	display: flex
+	align-items: baseline
+	gap: 0.3rem
+	@extend %anchor-link
+	a
+		text-decoration: none
+
+@media (max-width:1024px) and (min-width:321px)
+	.switch
+		width: 34.7rem
+
+@media (max-width:320px)
+	.switch
+		margin-bottom: 6.3rem
+		width: 8.5rem
+		span
+			display: none
+
+.switch:hover
+	@extend %anchor-link-active
+
+.switch:hover::before
+	content: " "
+	position: absolute
+	transform: translate(-0.5rem, -0.55rem)
+	height: 0.4rem
+	width: 27rem
+	background: linear-gradient(90deg, rgba(243,130,129,1) 37%, rgba(255,255,255,1) 37%)
+
+@media (max-width:320px)
+	.switch:hover::before
+		width: 8.5rem
+		background: $colorTomato
+		transform: translate(-0.9rem, -0.6rem)
+
+@media (max-width:1024px) and (min-width:321px)
+	.switch:hover::before
+		width: 34.7rem
+		transform: translate(-1rem, -0.6rem)

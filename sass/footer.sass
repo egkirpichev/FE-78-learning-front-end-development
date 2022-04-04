@@ -1,0 +1,257 @@
+.footer
+	.container
+		display: flex
+		justify-content: space-between
+		padding-top: 4.2rem
+		gap: 3rem
+
+@media (max-width:320px)
+	.footer
+		.container
+			flex-direction: column
+			align-items: center
+
+.footer
+	.socials
+		width: 37rem
+		.text
+			margin-bottom: 3.4rem
+			font-family: 'Raleway', sans-serif
+			font-weight: 400
+			font-size: 1.8rem
+			line-height: 2.1rem
+			text-align: left
+			color: $colorDarkgrey
+
+@media (max-width:320px)
+	.footer
+		.socials
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 100%.0
+			.separator
+				width: 100%
+				margin: 2rem auto
+
+.footer
+	.socials
+		.follower-count
+			.number
+				display: inline-block
+				font-family: 'Raleway', sans-serif
+				font-weight: 700
+				font-size: 3.6rem
+				line-height: 3rem
+				text-transform: uppercase
+			.name
+				display: inline-block
+				font-family: 'Raleway', sans-serif
+				font-weight: 400
+				font-style: italic
+				font-size: 1.8rem
+				line-height: 3rem
+				text-transform: uppercase
+
+.footer
+	.socials
+		.logo
+			margin: 2.4rem 0 5.65rem
+
+.footer
+	.socials
+		.separator
+			box-sizing: border-box
+			height: 0rem
+			border: none
+			border-bottom: 0.1rem solid $colorDarkgrey
+
+.footer
+	.socials
+		.socials__icons
+			display: flex
+			gap: 5.25rem
+			margin-bottom: 3.7rem
+
+.footer
+	.socials
+		.socials__icons
+			.text
+				font-family: 'Raleway', sans-serif
+				font-style: italic
+				font-weight: 400
+				font-size: 1.3rem
+				line-height: 4.3rem
+				margin: 0
+
+.footer
+	.socials
+		.socials__icons
+			.icons-container
+				display: flex
+				justify-content: space-between
+				align-items: center
+				gap: 1.1rem
+				.icon
+					display: inline-block
+					font-size: 2.4rem
+					color: $colorOcean
+					cursor: pointer
+
+.footer
+	.socials
+		.subscribtion
+			display: flex
+
+@media (max-width:320px)
+	.footer
+		.socials
+			.subscribtion
+				flex-direction: column
+				width: 100%
+
+.footer
+	.socials
+		.subscribtion
+			#e-mail
+				display: block
+				width: 23.4rem
+				@extend %headingFont-5
+				color: $colorDarkgrey
+				border: 1px solid $colorDarkgrey
+				line-height: 5.5rem
+				align-items: center
+				text-align: center
+
+@media (max-width:320px)
+	.footer
+		.socials
+			.subscribtion
+				#e-mail
+					width: 100%
+					padding: 0
+					margin-bottom: 3.6rem
+
+.footer
+	.socials
+		.subscribtion
+			.subscribe-button
+				@extend %button-2
+			.subscribe-buttonn:hover
+				@extend %button-2-hover
+			.subscribe-button:active
+				@extend %button-2-active
+
+@media (max-width:320px)
+	.footer
+		.socials
+			.subscribtion
+				.subscribe-button
+					width: 100%
+
+.footer
+	.articles
+		width: 40.2%
+		display: flex
+		flex-direction: column
+
+@media (max-width:320px)
+	.footer
+		.articles
+			width: 100%
+
+.footer
+	.articles
+		.header
+			@extend %headingFont-5
+			font-weight: 700
+			font-size: 2.4rem
+			line-height: 10rem
+			text-transform: uppercase
+			text-align: left
+
+@media (max-width:320px)
+	.footer
+		.articles
+			.header
+				text-align: center
+
+.footer
+	.articles
+		.article
+			display: flex
+			gap: 3rem
+			margin-bottom: 2rem
+			cursor: pointer
+
+.footer
+	.articles
+		.article
+			.title
+				@extend %headingFont-5
+				font-weight: 700
+				text-transform: uppercase
+				text-align: left
+
+.footer
+	.articles
+		.article
+			.date
+				@extend %headingFont-5
+				margin: 0.7rem 0 0
+				font-size: 1.8rem
+				line-height: 3.5rem
+				text-align: left
+
+.instagram-photos
+	.header
+		@extend %headingFont-5
+		font-weight: 700
+		font-size: 2.4rem
+		line-height: 10rem
+		text-transform: uppercase
+		text-align: left
+
+@media (max-width:320px)
+	.instagram-photos
+		.header
+			text-align: center
+
+.instagram-photos
+	.instagram-photos-grid
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		grid-template-rows: 	1fr 1fr 1fr
+		margin-bottom: 3.8rem
+		.picture
+			cursor: pointer
+
+.instagram-photos
+	#link
+		font-family: 'Raleway', sans-serif
+		font-weight: 400
+		font-size: 1.3rem
+		line-height: 1.5rem
+		text-decoration-line: underline
+		text-transform: uppercase
+		color: $colorCoal
+
+@media (max-width:320px)
+	.instagram-photos
+		#link
+			display: inline-block
+			width: 100%
+			text-align: center
+
+.credentials
+	margin-top: 4.2rem
+	.separator
+		box-sizing: border-box
+		height: 0rem
+		border: none
+		border-bottom: 0.1rem solid $colorDarkgrey
+
+.credentials
+	.copyright
+		padding: 1.7rem 0
+		@extend %headingFont-6
