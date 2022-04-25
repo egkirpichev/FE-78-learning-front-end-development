@@ -1,208 +1,233 @@
 // ### NORMAL level
 
-// #### Task 1 💻
+// #### Task 1 🖥
 
-// const getSum = function (b) {
-// 	let sum = 0
-// 	for (i = 0; i <= b; i++) {
-// 		sum = sum + i
-// 	} return sum
-// } 
+// Дан массив:
 
-// console.log(getSum(100))
+// ```javascript
+//     const colors = ['red', 'green', 'blue']
+// ```
 
-// #### Task 2 💻
+// Выведите в консоль его длину.
 
-// const overCharge = function (loanBody, interest, period) {
-// 	let monthlyPayment = Math.round(loanBody * (interest/12/100*((1+interest/12/100)**(period*12))) / (((1 + interest/12/100)**(period*12)-1)))
-// 	console.log(`ежемесячный платеж ${monthlyPayment}`)
-// 	return monthlyPayment*12*period - loanBody 
-// } 
+const colors = ['red', 'green', 'blue']
+console.log(colors.length)
 
-// console.log(overCharge(10000, 17, 5))
+// #### Task 2 🖥
 
-// #### Task 3 💻
+// Дан массив:
 
-// const trimString = function (str, strStart, strEnd) {
-// 	str = str.split(" ")
-// 	strStartIndex = 0
-// 	strStartIndex = 0
-// 	for (i = 0; i < str.length; i++) {
-// 		if (str[i].includes(strStart)) {
-// 			strStartIndex = i
-// 		} else if (str[i].includes(strEnd)) {
-// 			strEndIndex = i
-// 		}
-// 	} return str.slice(strStartIndex++, strEndIndex)
-// } 
+// ```javascript
+//     const animals = ['monkey', 'dog', 'cat']
+// ```
 
-// console.log(trimString("Что-то выдавало в Штирлице советского разведчика. Не то мужественный профиль, не то решительная походка, не то волочащийся за ним парашют.", "в", "парашют."))
+// Выведите в консоль его последний элемент вне зависимости от его длинны.
 
-// #### Task 4 💻
+const animals = ['monkey', 'dog', 'cat']
+console.log(animals[animals.length-1])
 
-// const getSumNumbers = function (a) {
-// 	a = String(a).split("")
-// 	let sum = 0
-// 	for (i=0; i < a.length; i++){
-// 		sum = sum + Number(a[i]) 
-// 	} return sum
-// } 
+// #### Task 3 🖥
 
-// console.log(getSumNumbers(2022)) 
+// Дан массив:
 
-// #### Task 5 💻
+// ```javascript
+//     const numbers = [5, 43, 63, 23, 90]
+// ```
 
-// const getSum = function (a, b) {
-// 	let sum = 0
-// 	for (i = a; i <= b; i++) {
-// 		sum = sum + i
-// 	} return sum
-// } 
+// Удалите все элементы в массиве и выведите в консоль полученный результат.
 
-// console.log(getSum(1, 0)) // 1 + 0 = 1
-// console.log(getSum(1, 2)) // 1 + 2 = 3
-// console.log(getSum(0, 1)) // 0 + 1 = 1
-// console.log(getSum(1, 1)) // 1 Since both are same
-// console.log(getSum(-1, 0))// -1 + 0 = -1
-// console.log(getSum(-1, 2))// -1 + 0 + 1 + 2 = 2
+// > Реализуйте решение двумя способами.
 
-// #### Task 6 💻
+const numbers = [5, 43, 63, 23, 90]
+const numbersCopy = [...numbers]
+// for(i=1; i<=numbers.length; i++){
+// 	numbersCopy.pop()
+// }
+// console.log(numbersCopy) 
 
-// const foo = () => {return console.log(foo.name)}
-// const boo = () => {return console.log(boo.name)}
+for(i=1; i<=numbers.length; i++){
+	numbersCopy.shift()
+}
+console.log(numbersCopy)
 
-// const fooboo = function (condition, foo, boo) {
-// 	if (!!condition) {
-// 		return foo()
-// 	} else return boo()
-// } 
+// #### Task 4 🖥
 
-// fooboo(false, foo, boo)
+// Дан массив:
+
+// ```javascript
+//     const students = ['Polina', 'Dasha', 'Masha']
+// ```
+
+// + Удалите последний элемент массива, затем вместо него добавьте в массив студента `Borya`.
+// + Удалите первый элемент массива, затем вместо него добавьте в массив студента `Andrey`.
+// + Полученный результат не забудьте вывести в консоль.
+
+const students = ['Polina', 'Dasha', 'Masha']
+students.pop()
+students.push("Borya")
+students.shift()
+students.unshift("Andrey")
+console.log(students)
+
+// #### Task 5 🖥
+
+// Дан массив:
+
+// ```javascript
+//     const cats = ['Gachito', 'Tom', 'Batman']
+// ```
+
+// Выведите в консоль все элементы массива. Сначала через цикл **`for`**, затем **`for of`**.
+
+const cats = ['Gachito', 'Tom', 'Batman']
+
+for (i = 0; i < cats.length; i++) {
+	console.log(cats[i])
+}
+
+for (let item of cats) {
+	console.log(item)
+}
+
+// #### Task 6 🖥
+
+// ```javascript
+//     const evenNumbers = [2, 4, 6, 8, 10]
+//     const oddNumbers = [1, 3, 5, 7, 9]
+// ```
+
+// + Соедините два массива чисел в один.
+// + В полученном массиве попробуйте найти индекс числа **`8`**
+
+const oddNumbers = [1, 3, 5, 7, 9]
+const evenNumbers = [2, 4, 6, 8, 10]
+
+const combinedArray = oddNumbers.concat(evenNumbers)
+console.log(combinedArray)
+console.log(combinedArray.findIndex((el) => el === 8))
+
+// #### Task 7 🖥
+
+// Дан массив:
+
+// ```javascript
+//     const binary = [0, 0, 0, 0]
+// ```
+ 
+// + Наш бинарный массив неполный, в нем явно не хватает единиц.
+// + Превратите данный массив в строку.
+
+// > [0, 0, 0, 0] -> '0101010'
+
+const binary = [0, 0, 0, 0]
+
+const binaryString = binary.join(1)
+console.log(binaryString)
 
 // ### ADVANCED level
 
-// #### Task 1 👨‍🏫 
+// > Для решения задач используйте циклы **`for`** или **`for of`**
 
-// const triangle = function(a, b, c) {
-// 	if (a > 0 && b > 0 && c > 0) {
-// 		if (a + b > c && a + c > b && b + c > a) {
-// 		return true
-// 		} else return false
-// 	} else return alert("Длина стороны треугольника должна быть положительной")
-// }
-// console.log(triangle(-1, 15, 15))
+// #### Task 1 👨‍🏫
 
-// #### Task 2 👨‍🏫 
+// Реализуйте функцию которая будет проверять, является ли слово палиндромом.
+
+const newFucntion = function (input) {
+	const inputArr = input.split("")
+	console.log(inputArr)
+	const inputArrReversed = [...inputArr].reverse()
+	console.log(inputArrReversed)
+	for (i = 0; i < inputArr.length; i++) {
+		if (inputArr[i] !== inputArrReversed[i]) {
+			return false
+		} else return true
+	} 
+} 
+
+console.log(newFucntion("egor"))
 
 
-	let budget = Number(prompt("Введите сумму вашего бюджета")) // запрашиваем бюджет
-	let currency = false // далее уточняе валюту накоплений
-	if (currency = confirm("Вы ввели сумму накоплений в рублях?")) {
-			currency = "RUB"
-		}	else if (currency = confirm("Вы ввели сумму накоплений в долларах?")){
-			currency = "USD"
-		}	else if	(currency = confirm("Вы ввели сумму накоплений в евро?")){
-			currency = "EUR"} else {
-				currency = "RUB";
-				budget = Number(prompt("Пожалуйста, введите сумму вашего бюджета в рублях"))
-			}
-	
-	const phonePriceRUB = 800 //задаем переменные цен, НДС и курсов
-	const casePriceRUB = 20
-	const taxRateVAT = 0.2
-	let	exchangeRateEUR = 3
-	let	exchangeRateUSD = 2.8
+// #### Task 2 👨‍🏫
 
-	let bill = {} //создаем объект для последующего вывода данных 
-	let purchasePrice = 0
-	let budgetLeft = 0
-	let purchaseQuantity = 0
+// ```javascript
+//     const matrix = [
+//         [12, 98, 78, 65, 23],
+//         [54, 76, 98, 43, 65],
+//         [13, 324, 65, 312],
+//         [9092, 22, 45, 90000],
+//     ]
+// ```
 
-	
-	const purchasePriceCalc = function ()	{if (currency === "RUB") {for (let i = 1; purchasePrice <= budget; i++) { //расчет учитывает курс валюты 
-		purchasePrice = Number(((1+taxRateVAT)*(phonePriceRUB + casePriceRUB)*i).toFixed(2)) //округляем сумму чека до двух знаков после запятой
-		purchaseQuantity = i
-	}} else if (currency === "EUR") {for (let i = 1; purchasePrice <= budget; i++) {
-		purchasePrice = Number(((1+taxRateVAT)*(phonePriceRUB/exchangeRateEUR + casePriceRUB/exchangeRateEUR)*i).toFixed(2))
-		purchaseQuantity = i
-	}} else {for (let i = 1; purchasePrice <= budget; i++) {
-		purchasePrice = Number(((1+taxRateVAT)*(phonePriceRUB/exchangeRateUSD + casePriceRUB/exchangeRateUSD)*i).toFixed(2))
-		purchaseQuantity = i
-	}}
-	purchasePrice = Number(((1+taxRateVAT)*(phonePriceRUB/exchangeRateEUR + casePriceRUB/exchangeRateEUR)*purchaseQuantity).toFixed(2))
-	budgetLeft = Number((budget - purchasePrice).toFixed(2))
+// > Выведите в консоль среднее значение чисел в многомерном массиве.
 
-	return bill = { //возвращаем данные через объект
-		purchasePrice: purchasePrice,
-		budgetLeft: budgetLeft,
-		purchaseQuantity: purchaseQuantity
+const matrix = [
+	[12, 98, 78, 65, 23],
+	[54, 76, 98, 43, 65],
+	[13, 324, 65, 312],
+	[9092, 22, 45, 90000],
+]
+
+const joinedMatrix = matrix.join().split(",") //делаем многомерный массив одномерным
+console.log(joinedMatrix)
+console.log(matrix)
+
+const arevageNumber = function(array) {
+	let sum = 0
+	for (item of array) {
+		sum = sum + item 
 	}
+	return sum/joinedMatrix.length
 }
 
-	bill = purchasePriceCalc() //вызываем функцию, перезаписываем ключи объекта 
-
-	if (bill[purchaseQuantity] === 0) { // проверяем сможет ли человек совершить покупку
-		alert("Ваш бюджет не позволяет совершить ни одной покупки")
-	} else {
-		alert(`С вашим бюджетом вы сможете купить следующее количество пар смартфон+чехол: ${purchaseQuantity}. Сумма чека с учетом НДС составит: ${purchasePrice}${currency}. Остаток денежных средств на вашем счете будет равен ${budgetLeft}${currency}`)
-	}
-
-	console.log(budget)
-	console.log(currency)
-	console.log(purchasePriceCalc())
+console.log(arevageNumber(joinedMatrix))
 
 // #### Task 3 👨‍🏫
 
-// const chocolate = function(n, m) {
-// 	let numBreaks = 0
-// 	if (n > 0 && m > 0 && n % 1 === 0 && m % 1 === 0) {
-// 		for (i = 1; i < n * m; i++) {
-// 			numBreaks += 1 
-// 		}
-// 	} else alert("Введите положительные целые числа")
-// 	return alert (`Для разделения плитки потребуется ${numBreaks} надломов`)
-// }
-// console.log(chocolate(NaN, NaN))
+// Дан массив:
 
-// #### Codewars
+// ```javascript
+//    const mixedNumbers = [-14, 24, -89, 43, 0 , -1, 412, 4]
+// ```
 
-// 1. https://www.codewars.com/kata/55a5befdf16499bffb00007b
+// Создайте два массива, в один поместите все положительные числа включая 0, в другой все отрицательные. Оба массива затем выведите в консоль. 
 
-// function add(a,b){
-// 	return a + b
-// }
+const mixedNumbers = [-14, 24, -89, 43, 0 , -1, 412, 4]
 
-// function divide(a,b){
-// 	return a / b
-// }
+const positiveNumbers = [...mixedNumbers].filter((el) => el >= 0)
+console.log(positiveNumbers)
+const negativeNumbers = [...mixedNumbers].filter((el) => el < 0)
+console.log(negativeNumbers)
 
-// function multiply(a,b){
-// 	return a * b
-// }
 
-// function mod(a,b){
-// 	return a % b
-// }
- 
-// function exponent(a,b){
-// 	return a ** b
-// }
-	
-// function subt(a,b){
-// 	return a - b
-// }
+// #### Task 4 👨‍🏫
 
-// 2. https://www.codewars.com/kata/559ac78160f0be07c200005a
+// Создать массив длинной не менее 5, из динамически созданных случайных чисел. Далее написать алгоритм который берет все числа из исходного массива, возводит их в куб и записывает в новый массив. В конце вывести оба массива в консоль.
 
-// function nameShuffler(str){
-//   let arr = str.split(" ").reverse()
-//   return arr.join(" ")
-// }
+const firstRandomArray = [Math.floor(Math.random()*10), Math.floor(Math.random()*10), Math.floor(Math.random()*10), Math.floor(Math.random()*10), Math.floor(Math.random()*10)]
 
-// 3. https://www.codewars.com/kata/50654ddff44f800200000007
+console.log(firstRandomArray)
 
-// function solution(a, b){
-//   if (a.length > b.length) {
-//     return b + a + b
-//   }else return a + b + a
-// }
+const secondRandomArray = [...firstRandomArray].map((el) => el**3)
+
+console.log(secondRandomArray)
+
+
+#### Task
+
+1. https://www.codewars.com/kata/57f781872e3d8ca2a000007e
+
+function maps(x){
+  return x.map(el => el*2)
+}
+
+2. https://www.codewars.com/kata/5715eaedb436cf5606000381
+
+function positiveSum(arr) {
+  return arr.reduce(((total, el) => el > 0 ? total+el : total),0)
+}
+
+3. https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3
+
+function abbrevName(name){
+  let arr = name.split(" ")
+  return `${arr[0][0].toUpperCase()}.${arr[1][0].toUpperCase()}`}
